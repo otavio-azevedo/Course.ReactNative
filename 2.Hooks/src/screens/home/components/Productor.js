@@ -1,14 +1,26 @@
-import React, { useState } from 'react';
+import React, { useReducer, useMemo } from 'react';
 import { Text, View, Image, StyleSheet, TouchableOpacity } from 'react-native';
 import Stars from '../../../components/Stars';
 
+const distanceFormated = (distance) => {
+    console.log(distance);
+    return `${distance}m`;
+}
+
 export default function Productor({ name, image, distance, stars }) {
 
-    const [selected, setSelected] = React.useState(false);
+    const [selected, invertSelected] = useReducer(
+        (selected) => !selected,
+        false
+    );
+    
+    //Retorna um valor memoizado
+    //O valor só será recalculado se uma das dependências mudar (distance)
+    const textDistance = useMemo(() => distanceFormated(distance), [distance]);
 
     return <TouchableOpacity
         style={styles.card}
-        onPress={() => setSelected(!selected)}
+        onPress={invertSelected}
     >
         <Image source={image} accessibilityLabel={name} style={styles.image} />
         <View style={styles.view}>
@@ -20,7 +32,7 @@ export default function Productor({ name, image, distance, stars }) {
                     bigStar={selected}
                 />
             </View>
-            <Text style={styles.distance}>{distance}</Text>
+            <Text style={styles.distance}>{textDistance}</Text>
         </View>
     </TouchableOpacity>
 }

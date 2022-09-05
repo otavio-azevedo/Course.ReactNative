@@ -1,24 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { FlatList, Text, StyleSheet } from 'react-native';
-import { loadProdutores } from '../../../services/loadData';
+import useProductors from '../../../hooks/useProductors';
 
 import Productor from './Productor';
 
-//hooks example
-export default function Produtores({ top: Top }) {
 
-    const [title, setTitle] = useState('');
-    const [list, setList] = useState([]);
+export default function Productors({ top: Top }) {
 
-//O UseEffect é uma função que vem do React que, se o segundo parâmetro for uma lista vazia ([]), faz uma ação (apenas uma vez) quando um componente é carregado.
-    useEffect(() => {
-        const ret = loadProdutores();
-
-        setTitle(ret.title);
-        setList(ret.list);
-
-        console.log(loadProdutores());
-    }, []);
+    //custom hooks example
+    const [title, list] = useProductors();
 
     const Header = () => {
         return <>

@@ -1,8 +1,8 @@
 import React from 'react';
-import Top from './components/top.js';
+import Top from './components/Top.js';
 
-import Produtores from './components/produtores.js';
+import Productors from './components/Productors';
 
 export default function Home() {
-    return <Produtores top={Top} />
+    return <Productors top={Top} />
 }
