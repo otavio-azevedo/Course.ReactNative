@@ -1,0 +1,75 @@
+{
+  "users": [
+    {
+      "login": "otavio-azevedo",
+      "id": 3,
+      "avatar_url": "https://avatars.githubusercontent.com/u/52329533?v=4",
+      "name": "Otávio Azevedo",
+      "email": "otavio@email.com",
+      "followers": 997,
+      "following": 554
+    },
+    {
+      "login": "andreocunha",
+      "id": 1,
+      "avatar_url": "https://avatars.githubusercontent.com/u/54721131?v=4",
+      "name": "André Oliveira Cunha",
+      "email": "andre@email.com",
+      "followers": 43,
+      "following": 54
+    },
+    {
+      "login": "nataliakt",
+      "id": 2,
+      "avatar_url": "https://avatars.githubusercontent.com/u/9091491?v=4",
+      "name": "Natalia Kelim Thiel",
+      "email": "natalia@email.com",
+      "followers": 51,
+      "following": 7
+    }
+  ],
+  "repos": [
+    {
+      "id": 6,
+      "userId": 3,
+      "name": "blablabla",
+      "data": "1 de jan. de 2020"
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "name": "Arduino_AVES_Telemetria",
+      "data": "1 de jan. de 2021"
+    },
+    {
+      "id": 4,
+      "userId": 1,
+      "name": "bot_piano_tiles",
+      "data": "1 de jan. de 2021"
+    },
+    {
+      "id": 1,
+      "userId": 2,
+      "name": "2048evolution34",
+      "data": "1 de jan. de 2021"
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "name": "alura-pikachu",
+      "data": "1 de jan. de 2021"
+    },
+    {
+      "id": 3,
+      "userId": 2,
+      "name": "alura-react-native-comecando-do-zero",
+      "data": "1 de jan. de 2021"
+    },
+    {
+      "id": 5,
+      "userId": 1,
+      "name": "Alura_cursos",
+      "data": "1 de jan. de 2021"
+    }
+  ]
+}
